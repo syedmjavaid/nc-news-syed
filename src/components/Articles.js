@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { getArticles } from "../utils/api";
+import { useParams } from "react-router-dom";
 
 function Articles() {
   const [articles, setArticles] = useState([]);
+  const { slug } = useParams();
 
   useEffect(() => {
-    getArticles().then((articlesFromApi) => {
+    getArticles(slug).then((articlesFromApi) => {
       setArticles(articlesFromApi);
     });
-  }, []);
+  }, [slug]);
 
   return (
     <main>

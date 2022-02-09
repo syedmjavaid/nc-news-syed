@@ -12,6 +12,7 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Articles />}></Route>
+          <Route path="/topics/:slug" element={<Articles />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

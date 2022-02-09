@@ -7,7 +7,6 @@ function Nav() {
 
   useEffect(() => {
     getTopics().then((topicsFromApi) => {
-      console.log(topicsFromApi);
       setTopics(topicsFromApi);
     });
   }, []);
