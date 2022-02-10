@@ -13,6 +13,7 @@ function Nav() {
 
   return (
     <nav className="Nav">
+      Home
       {topics.map((topic) => {
         return (
           <Link key={topic.slug} to={`/topics/${topic.slug}`}>
