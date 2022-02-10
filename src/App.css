@@ -7,12 +7,20 @@
   font-size: 50px;
   color: red;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .Nav {
   border: 1px solid blue;
   padding: 10px;
   font: arial;
+}
+
+.nav-elements {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .article-list {
@@ -23,4 +31,17 @@
 
 .articles {
   border: 0.5px solid gray;
+}
+
+.comments {
+  list-style-type: none;
+  text-align: left;
+  border: 1px solid blue;
+  padding: 1px;
+}
+
+.comment-heading {
+  text-align: left;
+  padding-left: 20px;
+  border: 1px solid red;
 }

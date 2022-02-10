@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleArticle } from "../utils/api";
+import ArticleComments from "./ArticleComments";
 
 function SingleArticle() {
   const [article, setArticle] = useState([]);
   const { article_id } = useParams();
 
   useEffect(() => {
-    getSingleArticle(article_id).then((article) => {
-      setArticle(article);
+    getSingleArticle(article_id).then((articleFromApi) => {
+      setArticle(articleFromApi);
     });
   }, []);
 
@@ -19,6 +20,7 @@ function SingleArticle() {
       <p>By {article.author}</p>
       <p>Date: {article.created_at}</p>
       <p>Votes: {article.votes}</p>
+      <ArticleComments />
     </main>
   );
 }

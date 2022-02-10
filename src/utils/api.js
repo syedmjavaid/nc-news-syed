@@ -23,3 +23,9 @@ export const getSingleArticle = (id) => {
     return data.article;
   });
 };
+
+export const getArticleComments = (id) => {
+  return newsApi.get(`articles/${id}/comments`).then(({ data }) => {
+    return data.comments;
+  });
+};
