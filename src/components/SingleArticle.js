@@ -16,7 +16,7 @@ function SingleArticle() {
   return (
     <main>
       <h1>{article.title}</h1>
-      <p>{article.body}</p>
+      <p className="article-body">{article.body}</p>
       <p>By {article.author}</p>
       <p>Date: {article.created_at}</p>
       <p>Votes: {article.votes}</p>

@@ -33,6 +33,11 @@
   border: 0.5px solid gray;
 }
 
+.article-body {
+  text-align: left;
+  padding-left: 20px;
+}
+
 .comments {
   list-style-type: none;
   text-align: left;
