@@ -4,7 +4,7 @@ const newsApi = axios.create({
   baseURL: "https://fe-project-api.herokuapp.com/api",
 });
 
-export const getTopics = (slug) => {
+export const getTopics = () => {
   return newsApi.get("/topics").then(({ data }) => {
     return data.topics;
   });

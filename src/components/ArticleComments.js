@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleComments } from "../utils/api";
+import AddComment from "./AddComment";
 
 function ArticleComments() {
   const [comments, setComments] = useState([]);
@@ -16,6 +17,7 @@ function ArticleComments() {
     <main>
       <h3 className="comment-heading">Comments</h3>
       <h5>Add Comment</h5>
+      <AddComment />
 
       <ul>
         {comments.map((comment) => {
