@@ -30,8 +30,8 @@ export const getArticleComments = (id) => {
   });
 };
 
-export const postComment = (id, username, body) => {
-  let postObject = { username, body };
+export const postComment = (id, body) => {
+  let postObject = { body };
 
   return newsApi.post(`articles/${id}/comments`, postObject).then(({ res }) => {
     console.log(res.data);
