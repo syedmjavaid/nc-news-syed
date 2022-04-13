@@ -1,5 +1,19 @@
+import { patchVote } from "../utils/api";
+
 const Votes = ({ voteNumber }) => {
-  return <button>⬆️ {voteNumber}</button>;
+  const increaseVote = () => {
+    patchVote();
+  };
+
+  return (
+    <button
+      onClick={() => {
+        increaseVote();
+      }}
+    >
+      ⬆️ {voteNumber}
+    </button>
+  );
 };
 
 export default Votes;

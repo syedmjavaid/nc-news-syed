@@ -37,3 +37,11 @@ export const postComment = (id, body) => {
     console.log(res.data);
   });
 };
+
+export const patchVote = (id, increment) => {
+  return newsApi
+    .patch(`articles/${id}/comments`, { inc_votes: 1 })
+    .then(({ data }) => {
+      console.log(data);
+    });
+};
