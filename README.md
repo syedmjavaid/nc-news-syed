@@ -1,13 +1,21 @@
-# Getting Started with Create React App
+# Front-end React Project - NC News
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The NC news app is a project built using ReactJS for front-end and using an ExpressJS based back-end available [here](https://github.com/syedmjavaid/be-nc-news-example).
 
-## Available Scripts
+## Running the project locally
 
-In the project directory, you can run:
+### 1. Install the dependencies
 
-### `npm start`
+```
+$ npm i
+```
 
-### `npm run eject`
+At a minimum, [Node 17.0.1](https://nodejs.org/en/) must be installed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Running the App
+
+```
+$ npm start
+```
+
+The locally hosted web-app will open in your browser.
