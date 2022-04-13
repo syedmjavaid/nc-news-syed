@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticleComments } from "../utils/api";
 import AddComment from "./AddComment";
-import Votes from "./VoteComment";
+import Votes from "./UpVote";
+import VotesDown from "./DownVote";
 
 function ArticleComments() {
   const [comments, setComments] = useState([]);
@@ -29,6 +30,7 @@ function ArticleComments() {
               <p>Date: {comment.created_at}</p>
               <p>Votes: {comment.votes}</p>
               <Votes voteNumber={comment.votes} />
+              <VotesDown />
             </li>
           );
         })}
