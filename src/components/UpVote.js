@@ -1,8 +1,11 @@
 import { patchVote } from "../utils/api";
+import { useParams } from "react-router-dom";
 
 const Votes = ({ voteNumber }) => {
+  const { article_id } = useParams();
+
   const increaseVote = () => {
-    patchVote();
+    patchVote(article_id);
   };
 
   return (
