@@ -3,15 +3,19 @@ import { useParams } from "react-router-dom";
 
 const Votes = ({ voteNumber }) => {
   const { article_id } = useParams();
+  const params = useParams();
+  console.log(params);
 
-  const increaseVote = () => {
+  const increaseVote = (e, comment_id) => {
+    console.log(e);
+    console.log(comment_id);
     patchVote(article_id);
   };
 
   return (
     <button
-      onClick={() => {
-        increaseVote();
+      onClick={(e, comment_id) => {
+        increaseVote(e, comment_id);
       }}
     >
       ⬆️ {voteNumber}

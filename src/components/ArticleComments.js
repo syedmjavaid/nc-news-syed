@@ -29,8 +29,11 @@ function ArticleComments() {
               <p>{comment.body}</p>
               <p>Date: {comment.created_at}</p>
               <p>Votes: {comment.votes}</p>
-              <Votes voteNumber={comment.votes} />
-              <VotesDown />
+              <Votes
+                voteNumber={comment.votes}
+                comment_id={comment.comment_id}
+              />
+              <VotesDown comment_id={comment.comment_id} />
             </li>
           );
         })}
